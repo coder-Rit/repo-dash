@@ -1,14 +1,26 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router'
 
 
 
 const LandingPage = () => {
+  const { users, selectedIndex } = useSelector((state) => state.usersList);
+
 
     const navigate = useNavigate();
 
     const direaction=(direct)=>{
-navigate(direct)
+     
+      if (direct==="/Task/3") {
+        if (selectedIndex) {
+          navigate(direct)
+          
+        }
+      }else{
+        navigate(direct)
+
+      }
     }
 
   return (

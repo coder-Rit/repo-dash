@@ -1,11 +1,16 @@
 import { Avatar, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import "./task3.css";
+import { useNavigate } from "react-router";
+
 
 const Task3 = () => {
+
+  const navigate = useNavigate()
+
   const { users, selectedIndex } = useSelector((state) => state.usersList);
 
   const [showPassword, setShowPassword] = useState(false);
@@ -18,8 +23,19 @@ const Task3 = () => {
   const toggleUIDVisibility = () => {
     setshowUid(!showUid);
   };
+
+  useEffect(() => {
+    if (!selectedIndex) {
+      navigate('/task/2')
+      
+    }
+  }, [ ])
+  
   return (
-    <div className="user-profile ">
+   
+       <div className="user-profile ">
+       { selectedIndex?(<>
+       
       <h1>User Profile</h1>
       <div>
         <div className="firstRow">
@@ -247,6 +263,7 @@ const Task3 = () => {
           </div>
         </div>
       </div>
+      </>):null}
     </div>
   );
 };
