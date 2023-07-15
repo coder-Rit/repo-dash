@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserList, storeUser } from "../Actions/UserAction";
+import { getUserList, storeUser } from "../../Actions/UserAction";
 import { useNavigate } from "react-router";
 import LoopIcon from '@mui/icons-material/Loop';
+import "./task2.css"
+
 
 const Task2 = () => {
   const dispatch = useDispatch();
@@ -44,8 +46,8 @@ if(!is_user_list_ready){
                 <img src={avatar} className="avatar" alt="" />
               </div>
               <div className="details">
-                <h2 class="employee-id">Employee ID: {id}</h2>
                 <h1 class="employee-name">{first_name + " " + last_name}</h1>
+                <h2 class="employee-id">Employee ID: {id}</h2>
                 <h3 class="employee-title">{employment.title}</h3>
               </div>
             </div>

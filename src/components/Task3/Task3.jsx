@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import "./task3.css";
 
 const Task3 = () => {
   const { users, selectedIndex } = useSelector((state) => state.usersList);
@@ -22,51 +23,53 @@ const Task3 = () => {
       <h1>User Profile</h1>
       <div>
         <div className="firstRow">
-          <div className="row">
-            <h2>Details</h2>
+          <div className="row  marginBottom basicDetails-container">
+            <h2  >Details</h2>
 
             <div className="basicDetails ">
-              <img
-                className="Avatar2"
-                src={users[selectedIndex].avatar}
-                alt="Avatar2"
-              />
+              <div className="flex-center-center">
+                <img
+                  className="Avatar2"
+                  src={users[selectedIndex].avatar}
+                  alt="Avatar2"
+                />
+              </div>
               <div>
                 <div className=" sub_row">
                   <div className="label">Name</div>
                   <div className="value">
-                    : {users[selectedIndex].first_name}{" "}
+                    :{users[selectedIndex].first_name}{" "}
                     {users[selectedIndex].last_name}
                   </div>
                 </div>
                 <div className=" sub_row">
                   <div className="label">Username</div>
-                  <div className="value">: {users[selectedIndex].username}</div>
+                  <div className="value">:{users[selectedIndex].username}</div>
                 </div>
                 <div className=" sub_row">
                   <div className="label">Email</div>
-                  <div className="value">: {users[selectedIndex].email}</div>
+                  <div className="value">:{users[selectedIndex].email}</div>
                 </div>
                 <div className=" sub_row">
                   <div className="label">Gender</div>
-                  <div className="value">: {users[selectedIndex].gender}</div>
+                  <div className="value">:{users[selectedIndex].gender}</div>
                 </div>
                 <div className=" sub_row">
                   <div className="label">Phone Number</div>
                   <div className="value">
-                    : {users[selectedIndex].phone_number}
+                    :{users[selectedIndex].phone_number}
                   </div>
                 </div>
                 <div className=" sub_row">
                   <div className="label">Social Insurance Number</div>
                   <div className="value">
-                    : {users[selectedIndex].social_insurance_number}
+                    :{users[selectedIndex].social_insurance_number}
                   </div>
                 </div>
                 <div className=" sub_row">
                   <div className="label">Date of Birth</div>
                   <div className="value">
-                    : {users[selectedIndex].date_of_birth}
+                    :{users[selectedIndex].date_of_birth}
                   </div>
                 </div>
               </div>
@@ -74,44 +77,46 @@ const Task3 = () => {
           </div>
 
           <div className="crid_N_emp">
-            <div className="row" style={{ marginBottom: "10px " }}>
+            <div className="row marginBottom">
               <h2>Credentials</h2>
 
               <div className="cridental  ">
-                <div className=" sub_row_cred">
-                  <div className="cred_label">ID</div>
-                  <div className="value">: {users[selectedIndex].id}</div>
+                <div className=" sub_row">
+                  <div className="label">ID</div>
+                  <div className="value">:{users[selectedIndex].id}</div>
                 </div>
 
-                <div className=" sub_row_cred">
-                  <div className="cred_label">UID</div>
-                  <div className="value" style={{ width: "200px" }}>
+                <div className=" sub_row">
+                  <div className="label">UID</div>
+                  <div className="value">
                     :
                     {showUid ? (
                       users[selectedIndex].uid
                     ) : (
-                      <span className="password-placeholder"> ******</span>
+                      <span className="password-placeholder">******</span>
                     )}
                     <span
                       className="password-toggle btn"
                       onClick={toggleUIDVisibility}
                     >
                       {showUid ? (
-                        <VisibilityOffIcon style={{background:"transparent"}} ></VisibilityOffIcon>
+                        <VisibilityOffIcon
+                          style={{ background: "transparent" }}
+                        ></VisibilityOffIcon>
                       ) : (
                         <VisibilityIcon></VisibilityIcon>
                       )}
                     </span>
                   </div>
                 </div>
-                <div className=" sub_row_cred">
-                  <div className="cred_label">Password</div>
+                <div className="  sub_row">
+                  <div className="label">Password</div>
                   <div className="value">
                     :
                     {showPassword ? (
                       users[selectedIndex].password
                     ) : (
-                      <span className="password-placeholder"> ******</span>
+                      <span className="password-placeholder">******</span>
                     )}
                     <span
                       className="password-toggle btn"
@@ -126,29 +131,28 @@ const Task3 = () => {
                   </div>
                 </div>
 
-                <div className=" sub_row_cred">
-                  <div className="cred_label">CC Number</div>
+                <div className=" sub_row">
+                  <div className="label">CC Number</div>
                   <div className="value">
-                    {" "}
                     :{users[selectedIndex].credit_card.cc_number}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row  ">
               <h2>Employment details</h2>
 
               <div className="empolument  ">
-                <div className="subcrip_row">
-                  <div className="cred_label">Job Title</div>
+                <div className="sub_row">
+                  <div className="label">Job Title</div>
                   <div className="value">
-                    : {users[selectedIndex].employment.title}
+                    :{users[selectedIndex].employment.title}
                   </div>
                 </div>
-                <div className="subcrip_row">
-                  <div className="cred_label">Skills</div>
+                <div className="sub_row">
+                  <div className="label">Skills</div>
                   <div className="value">
-                    : {users[selectedIndex].employment.key_skill}
+                    :{users[selectedIndex].employment.key_skill}
                   </div>
                 </div>
               </div>
@@ -157,46 +161,46 @@ const Task3 = () => {
         </div>
 
         <div className="second_row">
-          <div className="row">
+          <div className="row marginBottom">
             <h2>Address</h2>
 
             <div className="adders    ">
               <div className=" sub_row">
-                <div className="label_add">City</div>
+                <div className="label">City</div>
                 <div className="value">
-                  : {users[selectedIndex].address.city}
+                  :{users[selectedIndex].address.city}
                 </div>
               </div>
               <div className=" sub_row">
-                <div className="label_add">Loacalisation</div>
+                <div className="label">Loacalisation</div>
                 <div className="value">
-                  : {users[selectedIndex].address.street_name}{" "}
+                  :{users[selectedIndex].address.street_name}{" "}
                   {users[selectedIndex].address.street_address}
                 </div>
               </div>
 
               <div className=" sub_row">
-                <div className="label_add">Zip Code</div>
+                <div className="label">Zip Code</div>
                 <div className="value">
-                  : {users[selectedIndex].address.zip_code}
+                  :{users[selectedIndex].address.zip_code}
                 </div>
               </div>
               <div className=" sub_row">
-                <div className="label_add">State</div>
+                <div className="label">State</div>
                 <div className="value">
                   {" "}
-                  : {users[selectedIndex].address.state}
+                  :{users[selectedIndex].address.state}
                 </div>{" "}
                 <div className=" sub_row"></div>
               </div>
               <div className=" sub_row">
-                <div className="label_add">Country</div>
+                <div className="label">Country</div>
                 <div className="value">
-                  : {users[selectedIndex].address.country}
+                  :{users[selectedIndex].address.country}
                 </div>
               </div>
               <div className=" sub_row">
-                <div className="label_add">location</div>
+                <div className="label">location</div>
 
                 <div className="value">
                   {" "}
@@ -211,32 +215,32 @@ const Task3 = () => {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row marginBottom">
             <h2>Subcription</h2>
 
             <div className="subcription  ">
-              <div className="subcrip_row">
+              <div className="sub_row">
                 <div className="label">Subscription Plan</div>
                 <div className="value">
-                  : {users[selectedIndex].subscription.plan}
+                  :{users[selectedIndex].subscription.plan}
                 </div>
               </div>
-              <div className="subcrip_row">
+              <div className="sub_row">
                 <div className="label">Subscription Status</div>
                 <div className="value">
-                  : {users[selectedIndex].subscription.status}
+                  :{users[selectedIndex].subscription.status}
                 </div>
               </div>
-              <div className="subcrip_row">
+              <div className="sub_row">
                 <div className="label">Payment Method</div>
                 <div className="value">
-                  : {users[selectedIndex].subscription.payment_method}
+                  :{users[selectedIndex].subscription.payment_method}
                 </div>
               </div>
-              <div className="subcrip_row">
+              <div className="sub_row">
                 <div className="label">Subscription Term</div>
                 <div className="value">
-                  : {users[selectedIndex].subscription.term}
+                  :{users[selectedIndex].subscription.term}
                 </div>
               </div>
             </div>

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import ControlPointDuplicateIcon from "@mui/icons-material/ControlPointDuplicate";
+import "./Task1.css"
+
 const Task1 = () => {
   const [Circles_List, set_Circles_List] = useState([
     { status: "unlocked", count: 0, bg: "yellow" },
