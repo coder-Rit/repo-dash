@@ -1,0 +1,29 @@
+ 
+.gap0{
+    gap: 0;
+}
+.persentBox>span:nth-child(1){
+    font-size: 45px;
+    font-weight: bolder;
+    margin: 0;
+}
+.persentBox>span:nth-child(2){
+    font-weight: bolder;
+    font-size: 18px;
+}
+.persentBox>span:nth-child(3){
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.pointbox>span{
+ font-size: 11px;
+ position: relative;
+ bottom: 20px;
+}
+
+
+
+.swotdiv>img{
+    width: 200px;
+}

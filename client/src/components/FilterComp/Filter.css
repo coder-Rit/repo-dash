@@ -1,0 +1,53 @@
+.divider{
+    width: 100%;
+    height: 1px ;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+ .getterBottom10{
+    margin-bottom: 7px;
+    display: block;
+ }
+ form>span>input{
+    height: 30px;
+    border-radius: 5px;
+    outline:rgba(0, 0, 0, 0.884);
+    border: rgba(0, 0, 0, 0.469) 1px solid;
+    padding-left: 5px;
+    width: 100%;
+ }
+ .filtesDiv>span:nth-child(1){
+  font-size: larger;
+  margin-bottom: 13px;
+  font-weight: bolder;
+  
+  display: block;
+ }
+  .submit{
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: white;
+    width: 100px;
+    height: 35px;
+    outline: none;    
+    border: none;
+  }
+  .valuesDiv{
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff7a;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 1px;
+  }
+  .FormValue{
+   margin: 2px;
+   padding: 4px 6px;
+   border-radius: 2px;
+   background-color: rgba(80, 211, 255, 0.45);
+display: block;
+font-size: 12px;
+  }
