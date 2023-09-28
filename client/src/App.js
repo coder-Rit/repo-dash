@@ -1,17 +1,18 @@
 import './App.css';
 import MainComp from './components/MainComp/MainComp';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 
 function App() {
   
   return (
-    <div className=''>
-{/* <Intensity></Intensity>
-
-<SingleRow listData = {dataList}></SingleRow>
- */}
-<MainComp></MainComp>
-    </div>
+    <Router>
+    <Routes>
+   
+      <Route index element={<MainComp />} />
+    </Routes>
+</Router>
   );
 }
 
